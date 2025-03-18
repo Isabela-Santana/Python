@@ -1,0 +1,11 @@
+import math
+# recebe o valor em reais
+reais = float(input("Digite o valor em reais: "))
+#taxa de cambio do dolar em reais
+taxa_dolar_real = 4.97
+
+#calcula o valor em dolar
+dolar = reais / taxa_dolar_real
+#imprime o resultado
+print(f"O valor em dólar é: {dolar:.2f}")
+print(f"Isso equivale a aproximadamente {dolar:.2f} dólares.")
