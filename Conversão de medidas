@@ -1,0 +1,16 @@
+import math
+# É a biblioteca que é utilizada para Fazer calculos
+
+numero = float(input("Digite a quantidade de metros : "))
+
+km = numero / 1000
+hm = numero / 100
+dam = numero / 10
+dm = numero * 10
+cm = numero * 100
+mm = numero * 1000
+
+#para mostrar as medidas convertidas
+print(
+    f"A quantidade de metros é {numero}m, em quilometros é {km} , em hectometros  é {hm}, em decametros é {dam}, em decimetros é {dm}, em centimetros é {cm}, em milimetros é {mm}."
+)
