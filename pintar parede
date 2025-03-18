@@ -1,0 +1,13 @@
+import math
+
+larguraParede = float(input("Digite a largura da parede: "))
+alturaParede = float(input("Digite a altura da parede: "))
+
+#para calcular a arae da parede
+areaParede = larguraParede * alturaParede
+
+# para cada 2m² de parede, 1 litro de tinta
+litrosTinta = areaParede / 2
+
+print( f"A área da parede é {areaParede:2f}m² e será necessário {litrosTinta:2f} litros de tinta."
+)
