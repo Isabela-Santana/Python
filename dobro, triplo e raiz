@@ -1,0 +1,11 @@
+import math
+# É a biblioteca que é utilizada para Fazer calculos
+#numero que o usuario vai digitar
+numero = float(input("Digite um número : "))
+dobro = int(numero) * 2
+triplo = int(numero) * 3
+raiz = math.sqrt(int(numero))
+# para imprir os valores
+print(
+    f"O dobro de  {numero} é {dobro}, o triplo é {triplo}, e a raiz quadrada é {raiz} ."
+)
