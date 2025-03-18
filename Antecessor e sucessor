@@ -1,0 +1,8 @@
+#numero que o usuario vai digitar
+numero1 = float(input("Digite um número: "))
+#calculo para o antecessor e sucessor
+antecessor = numero1 - 1
+sucessor = numero1 + 1
+#imprime o resultado
+print(f"O antecessor de", numero1, "é", {antecessor})
+print(f"O sucessor de", numero1, "é", {sucessor})
