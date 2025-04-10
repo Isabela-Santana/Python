@@ -1,0 +1,17 @@
+import re
+import unidecode
+
+def remove_caracteres_especiais(frase):
+  frase= unidecode.unidecode(frase)
+  texto = re.sub(r"[^\w\s]", "", frase)
+  return texto
+
+def eh_palindromo(frase):
+  frase = remove_caracteres_especiais(frase.lower().replace(" ", ""))
+  return frase == frase[::-1]
+
+frase_usuario = input("Digite uma frase: ")
+if eh_palindromo(frase_usuario):
+  print("A frase é um palíndromo.")
+else:
+  print("A frase não é um palíndromo.")
