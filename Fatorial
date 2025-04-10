@@ -1,0 +1,16 @@
+# slicita ao usuario que digite um numero 
+num= int(input("Digite um numero inteiro positivo: "))
+# inicializa o fatorial como:1 
+fatorial=1 
+# verifica se o número é negativo,zero ou negativo
+if num < 0:
+  print("O fatorial não está definido para números negativos.")
+elif num == 0:
+  print("O fatorial de 0 é 1.") 
+else:
+  # calcula o fatorial do numero usando um loop for
+  for i in range(1,num + 1):
+    fatorial *= i
+    # exibe  o resultado
+
+print(f"O fatorial de {num} é {fatorial}")
