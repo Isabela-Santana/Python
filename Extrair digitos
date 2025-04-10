@@ -1,0 +1,21 @@
+def extrair_digitos(numero):
+
+  unidade=0
+  dezena=0
+  centena=0
+  milhar=0
+
+  if numero >= 0 :
+    unidade  = numero % 10
+    numero //= 10
+    dezena = numero % 10
+    numero //= 10
+    centena = numero % 10
+    numero //= 10
+    milhar = numero % 10
+# se e menor que des resta o valor que sai do parentese 
+    print(f"{milhar} milhar(es). {centena} centena(s) {dezena} dezen(s){unidade} e unidade(s)")
+  else:
+      print("Por favor insira um numero inteiro positivo")
+numero_digitado =int(input("Digite um numero: "))
+extrair_digitos(numero_digitado) 
