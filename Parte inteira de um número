@@ -1,0 +1,7 @@
+# digitar um valor decimal, mostrar na tela e extreir a perte inteira
+
+import math 
+valor_decimal = float(input("Digite um valor decimal: "))
+print("O valor digitado foi", valor_decimal)
+parte_inteira = math.trunc(valor_decimal)
+print("A parte inteira do valor é", parte_inteira)
