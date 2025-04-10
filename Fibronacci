@@ -1,0 +1,21 @@
+def fibronacci(n):
+  a=0
+  b=1
+  if n <= a:
+    print("por favor insira um numero inteiro positivo")
+  elif n == 1:
+   print("Sequencia de fibronacci até o 1º termo")
+   print(a)
+  else:
+    print("Sequencia de fibronacci até o",n,"º termo")
+    print(a,end=",")#imprime o primeiro termo
+    for val in range (n - 1):
+      #calcula o proximo termo da sequencia
+      a, b = b , a + b
+      print(a,end=",")
+
+try:
+  n = int(input("Digite um numero inteiro positivo: "))
+  fibronacci(n)
+except ValueError:
+  print("Por favor insira um numero inteiro válido!")
