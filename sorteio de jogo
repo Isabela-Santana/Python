@@ -1,0 +1,14 @@
+import random
+
+quantidade_jogos = int(input("Quantos jogos você quer que eu sorteie: "))
+jogos = []
+
+for i in range(quantidade_jogos):
+  jogo = sorted(random.sample(range(1,61),6))
+  
+  jogos.append(jogo)
+print(jogos)
+
+for i, jogo in enumerate(jogos):
+# o valor inicial do i é 0, indice da primeira lista  de valores # em cada laço umalista de numeros é passada para  a variavel jogo por vez
+  print(f"Jogo {i+1}: {jogo}")
