@@ -1,0 +1,30 @@
+import random 
+
+def jogar_dado():
+  return random.randint(1,6)
+
+jogadores = ["Jogador 1", "Jogador 2", "Jogador 3", "Jogador 4"]
+# criar um dicionario para armazenar os resultados de cada jogador
+
+resultados = {}
+
+for jogador in jogadores:
+  resultado = jogar_dado()
+  resultados[jogador] = resultado
+
+# encontra o maior resultado
+maior_resultado = max(resultados.values())
+
+print("Resultados:")
+for jogador, resultado in resultados.items():
+  print(f"{jogador}: {resultado}")
+
+#verificar os jogadores com o maior resultado 
+vencedor = [jogador for jogador, resultado in resultados.items() if resultado == maior_resultado]
+
+if len (vencedor) == 1:
+  print(f"\nO vencedor é {vencedor[0]}")  
+else:
+  print("\nEmpate entre os jogadores:")
+  for jogador in vencedor:
+    print(vencedor)
