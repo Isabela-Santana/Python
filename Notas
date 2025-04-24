@@ -1,0 +1,56 @@
+def obter_notas():
+  """
+  Solicita ao usuario que digite as notas dos alunos
+  retorna uma lista com essas notas."""
+  notas = []
+  while True:
+    nota =  input("Digite a nota do aluno (ou digite 'sair' para encerrar):" )
+    if nota.lower() == "sair":
+      break
+    try:
+      nota = float(nota)
+      notas.append(nota)
+    except ValueError:
+      print ("por favor, digite um valor válido ou 'sair' para encerrar.")
+    return notas
+
+def contar_notas(notas):
+  """Conta retorna a quantidade de notas fornbecidas 
+  """
+  return len(notas)
+
+def maior_nota(notas):
+  """ Retorna a maior nota fornecida"""
+  if notas:
+    return max(notas)
+  else:
+    return 0 # retornar 0 se a lista não houver notas
+
+def menor_nota(notas):
+  """
+  Retorna a menor nota fornecida"""
+  
+  if notas:
+    return min(notas)
+  else:
+   return 0 # retornar 0 se a lista não houver notas
+
+def media_turma(notas):
+  """ Calcula e retorna a media da turma"""
+  total = sum(notas)
+  quantidade = contar_notas(notas)
+  return total / quantidade if quantidade > 0 else 0
+  # retorna zero se a lista não houver notas
+
+notas = obter_notas()
+
+resultado = {
+  "quantidade": contar_notas(notas),
+  "maior": maior_nota(notas),
+  "menor": menor_nota(notas),
+  "media": media_turma(notas)
+}
+
+print("\nResultados:")
+for chave, valor in resultado.items():
+  print(f"{chave}: {valor:2F}")
